@@ -22,3 +22,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 func CSS(w http.ResponseWriter, r *http.Request) {
 	http.ServeFileFS(w, r, assets.CSS, r.URL.Path)
 }
+
+func Fonts(w http.ResponseWriter, r *http.Request) {
+	http.ServeFileFS(w, r, assets.Fonts, r.URL.Path)
+}

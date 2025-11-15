@@ -10,4 +10,6 @@ var (
 	Templates embed.FS
 	//go:embed "css/*"
 	CSS embed.FS
+	//go:embed "fonts/*"
+	Fonts embed.FS
 )

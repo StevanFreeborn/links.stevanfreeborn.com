@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"errors"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -20,10 +19,11 @@ func main() {
 
 	mux.HandleFunc("/", handlers.Index)
 	mux.HandleFunc("/css/", handlers.CSS)
+	mux.HandleFunc("/fonts/", handlers.Fonts)
 
 	loggingMux := middleware.Logging(mux)
 
-	const addr = ":7777"
+	const addr = "localhost:7777"
 
 	server := &http.Server{
 		Addr:    addr,
@@ -31,7 +31,7 @@ func main() {
 	}
 
 	go func() {
-		fmt.Printf("Starting server on %s\n", addr)
+		log.Printf("Server listening at http://%s\n", addr)
 
 		err := server.ListenAndServe()
 
