@@ -9,6 +9,9 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
+	// Links coming in external JSON data
+	// { link: "link", text: "text", "icon": "icon" }
+
 	t, err := template.ParseFS(assets.Templates, "templates/index.gohtml")
 
 	if err != nil {
