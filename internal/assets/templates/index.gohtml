@@ -13,11 +13,12 @@
 
 <body>
   <div class="image-container">
+    <!-- TODO: Generate alt text dynamically??? -->
     <img class="profile-picture" src="https://github.com/StevanFreeborn.png"
       alt="A man with short brown hair, a grey hoodie, and a white t-shirt smiles at the camera. He has a white earbud in his left ear. The background is a blurred office setting with warm lighting visible through glass partitions." />
     <div class="bio">
       <h1>Stevan Freeborn</h1>
-      <p>I'm a 32-year old dad of 2 who enjoys drinking coffee, lifting weights, and solving problems with code.</p>
+      <p>I'm a {{ .Age }}-year old dad of 2 who enjoys drinking coffee, lifting weights, and solving problems with code.</p>
     </div>
   </div>
   <nav class="links-container">
