@@ -23,7 +23,7 @@ func main() {
 
 	loggingMux := middleware.Logging(mux)
 
-	const addr = "localhost:7777"
+	const addr = ":7777"
 
 	server := &http.Server{
 		Addr:    addr,
