@@ -30,7 +30,6 @@ jobs:
         id: version
         run: echo "version=$(date +%Y.%m.%d.%H%M%S)" >> $GITHUB_OUTPUT
       - name: Build and push server image
-        working-directory: src/Blog
         run: |
           TAG=${{ secrets.DOCKERHUB_USERNAME }}/links.stevanfreeborn.com:${{ steps.version.outputs.version }}
           docker build -t $TAG .
