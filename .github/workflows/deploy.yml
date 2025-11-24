@@ -50,8 +50,15 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            TAG=${{ secrets.DOCKERHUB_USERNAME }}/links.stevanfreeborn.com:${{ steps.version.outputs.version }}
+            TAG=${{ secrets.DOCKERHUB_USERNAME }}/links.stevanfreeborn.com:${{ needs.build.outputs.version }}
+
             docker stop links.stevanfreeborn.com
             docker rm links.stevanfreeborn.com
+
             docker pull $TAG
-            docker run --restart always -d -p 7777:7777 --name links.stevanfreeborn.com $TAG
+            docker run \
+              --restart always \
+              -d \
+              -p 7777:7777 \
+              --name links.stevanfreeborn.com \
+              $TAG
