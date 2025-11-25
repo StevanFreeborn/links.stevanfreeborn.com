@@ -1,1 +1,43 @@
-# TODO: implement pull request workflow
+name: Pull Request
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: '1.25'
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: latest
+  build:
+    name: Build server
+    runs-on: ubuntu-24.04-arm    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: '1.25'
+      - name: Download dependencies
+        run: go mod download
+      - name: Build application
+        run: CGO_ENABLED=0 GOOS=linux go build -o server ./cmd/web/main.go
+  docker:
+    name: Build Docker image
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Build Docker image
+        run: docker build -t links.stevanfreeborn.com .
+
