@@ -30,23 +30,23 @@ type IndexViewModel struct {
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFS(assets.Templates, "templates/index.gohtml")
+	t, parseTemplateError := template.ParseFS(assets.Templates, "templates/index.gohtml")
 
-	if err != nil {
+	if parseTemplateError != nil {
 		http.Error(w, "Unable to load template", http.StatusInternalServerError)
 		return
 	}
 
-	linksFile, err := assets.JSON.Open(LINKS_JSON_PATH)
+	linksFile, openLinksFileError := assets.JSON.Open(LINKS_JSON_PATH)
 
-	if err != nil {
+	if openLinksFileError != nil {
 		http.Error(w, "Unable to load links", http.StatusInternalServerError)
 		return
 	}
 
-	links, err := readLinksFromJSON(linksFile)
+	links, readLinksFileError := readLinksFromJSON(linksFile)
 
-	if err != nil {
+	if readLinksFileError != nil {
 		http.Error(w, "Unable to parse links", http.StatusInternalServerError)
 		return
 	}
@@ -58,7 +58,12 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		Links: links,
 	}
 
-	t.Execute(w, viewModel)
+	executeError := t.Execute(w, viewModel)
+
+	if executeError != nil {
+		http.Error(w, "Unable to render template", http.StatusInternalServerError)
+		return
+	}
 }
 
 func CSS(w http.ResponseWriter, r *http.Request) {
@@ -74,7 +79,16 @@ func Images(w http.ResponseWriter, r *http.Request) {
 }
 
 func readLinksFromJSON(file fs.File) ([]Link, error) {
-	defer file.Close()
+	var closeErr error = nil
+
+	defer func() {
+		closeErr = file.Close()
+	}()
+
+	if closeErr != nil {
+		return nil, closeErr
+	}
+
 	var links []Link
 
 	decoder := json.NewDecoder(file)
