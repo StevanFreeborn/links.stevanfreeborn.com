@@ -20,6 +20,7 @@ func main() {
 	mux.HandleFunc("/", handlers.Index)
 	mux.HandleFunc("/css/", handlers.CSS)
 	mux.HandleFunc("/fonts/", handlers.Fonts)
+	mux.HandleFunc("/images/", handlers.Images)
 
 	loggingMux := middleware.Logging(mux)
 

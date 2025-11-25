@@ -12,4 +12,8 @@ var (
 	CSS embed.FS
 	//go:embed "fonts/*"
 	Fonts embed.FS
+	//go:embed "json/*"
+	JSON embed.FS
+	//go:embed "images/*"
+	Images embed.FS
 )

@@ -1,0 +1,22 @@
+[
+  {
+    "href": "https://youtube.stevanfreeborn.com",
+    "icon": "fa-brands fa-square-youtube fa-lg",
+    "text": "YouTube"
+  },
+  {
+    "href": "https://github.stevanfreeborn.com",
+    "icon": "fa-brands fa-square-github fa-lg",
+    "text": "GitHub"
+  },
+  {
+    "href": "https://blog.stevanfreeborn.com",
+    "icon": "fa-solid fa-square-rss fa-lg",
+    "text": "Blog"
+  },
+  {
+    "href": "https://linkedin.stevanfreeborn.com",
+    "icon": "fa-brands fa-square-linkedin fa-lg",
+    "text": "LinkedIn"
+  }
+]
