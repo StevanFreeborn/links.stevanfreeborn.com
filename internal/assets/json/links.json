@@ -23,5 +23,10 @@
     "href": "https://bluesky.stevanfreeborn.com",
     "icon": "fa-brands fa-square-bluesky fa-lg",
     "text": "Bluesky"
+  },
+  {
+    "href": "https://discord.stevanfreeborn.com",
+    "icon": "fa-brands fa-discord fa-lg",
+    "text": "Discord"
   }
 ]
