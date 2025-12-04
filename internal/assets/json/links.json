@@ -28,5 +28,10 @@
     "href": "https://discord.stevanfreeborn.com",
     "icon": "fa-brands fa-discord fa-lg",
     "text": "Discord"
+  },
+  {
+    "href": "https://stevanfreeborn.com",
+    "icon": "fa-solid fa-globe fa-lg",
+    "text": "Website"
   }
 ]
