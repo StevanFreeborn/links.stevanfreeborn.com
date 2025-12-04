@@ -18,5 +18,10 @@
     "href": "https://linkedin.stevanfreeborn.com",
     "icon": "fa-brands fa-square-linkedin fa-lg",
     "text": "LinkedIn"
+  },
+  {
+    "href": "https://bluesky.stevanfreeborn.com",
+    "icon": "fa-brands fa-square-bluesky fa-lg",
+    "text": "Bluesky"
   }
 ]
