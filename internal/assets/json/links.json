@@ -5,6 +5,11 @@
     "text": "YouTube"
   },
   {
+    "href": "https://twitch.stevanfreeborn.com",
+    "icon": "fa-brands fa-twitch fa-lg",
+    "text": "Twitch"
+  },
+  {
     "href": "https://store.stevanfreeborn.com",
     "icon": "fa-solid fa-store fa-lg",
     "text": "Store"
