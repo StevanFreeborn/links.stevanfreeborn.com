@@ -5,6 +5,11 @@
     "text": "YouTube"
   },
   {
+    "href": "https://store.stevanfreeborn.com",
+    "icon": "fa-solid fa-store fa-lg",
+    "text": "Store"
+  },
+  {
     "href": "https://github.stevanfreeborn.com",
     "icon": "fa-brands fa-square-github fa-lg",
     "text": "GitHub"
