@@ -27,7 +27,7 @@
     <ul>
       {{ range .Links }}
       <li>
-        <a class="link" href="{{ .Href }}" target="_blank">
+        <a class="link" href="{{ .Href }}" target="_blank" data-simple-event="{ .Text }">
           <i class="{{ .Icon }}"></i>
           <span>{{ .Text }}</span>
         </a>
@@ -35,6 +35,10 @@
       {{ end }}
     </ul>
   </nav>
+
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/inline-events.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
 </body>
 
