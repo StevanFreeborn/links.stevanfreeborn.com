@@ -27,7 +27,7 @@
     <ul>
       {{ range .Links }}
       <li>
-        <a class="link" href="{{ .Href }}" target="_blank" data-simple-event="{ .Text }">
+        <a class="link" href="{{ .Href }}" target="_blank" data-simple-event="{{ .Text }}">
           <i class="{{ .Icon }}"></i>
           <span>{{ .Text }}</span>
         </a>
