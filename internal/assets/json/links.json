@@ -15,6 +15,11 @@
     "text": "Store"
   },
   {
+    "href": "https://groundsforsupport.stevanfreeborn.com",
+    "icon": "fa-solid fa-mug-hot fa-lg",
+    "text": "Buy Me A Coffee"
+  },
+  {
     "href": "https://github.stevanfreeborn.com",
     "icon": "fa-brands fa-square-github fa-lg",
     "text": "GitHub"
