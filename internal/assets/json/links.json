@@ -1,5 +1,10 @@
 [
   {
+    "href": "https://substack.stevanfreeborn.com",
+    "icon": "fa-solid fa-video fa-lg",
+    "text": "stdout"
+  },
+  {
     "href": "https://youtube.stevanfreeborn.com",
     "icon": "fa-brands fa-square-youtube fa-lg",
     "text": "YouTube"
