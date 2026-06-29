@@ -1,5 +1,10 @@
 [
   {
+    "href": "https://groundsforsupport.stevanfreeborn.com",
+    "icon": "fa-solid fa-mug-hot fa-lg",
+    "text": "Buy Me A Coffee"
+  },
+  {
     "href": "https://youtube.stevanfreeborn.com",
     "icon": "fa-brands fa-square-youtube fa-lg",
     "text": "YouTube"
@@ -13,16 +18,6 @@
     "href": "https://store.stevanfreeborn.com",
     "icon": "fa-solid fa-store fa-lg",
     "text": "Store"
-  },
-  {
-    "href": "https://groundsforsupport.stevanfreeborn.com",
-    "icon": "fa-solid fa-mug-hot fa-lg",
-    "text": "Buy Me A Coffee"
-  },
-  {
-    "href": "https://tangled.stevanfreeborn.com",
-    "icon": "fa-brands fa-git-alt fa-lg",
-    "text": "Tangled"
   },
   {
     "href": "https://github.stevanfreeborn.com",
@@ -48,16 +43,6 @@
     "href": "https://discord.stevanfreeborn.com",
     "icon": "fa-brands fa-discord fa-lg",
     "text": "Discord"
-  },
-  {
-    "href": "https://telegram.stevanfreeborn.com",
-    "icon": "fa-brands fa-telegram fa-lg",
-    "text": "Telegram"
-  },
-  {
-    "href": "https://substack.stevanfreeborn.com",
-    "icon": "fa-solid fa-video fa-lg",
-    "text": "stdout"
   },
   {
     "href": "https://stevanfreeborn.com",
